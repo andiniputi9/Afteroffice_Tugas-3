@@ -138,17 +138,17 @@ describe('Menambahkan Karyawan Baru', () => {
         cy.xpath("//span[normalize-space()='(1) Record Found']").should('contain', "Record Found")
     });
 
-    // it('Cuti Karyawan Baru',()=> {
-    //     loginKaryawan(newusername,newpassword);
-    //         cy.get(':nth-child(1) > .oxd-main-menu-item').contains('Leave').click();
-    //         cy.get('.oxd-topbar-body-nav > ul > :nth-child(1)').click();
-    //         cy.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[1]").click();
-    //         cy.get('.oxd-select-dropdown').contains('CAN - Personal').click();
-    //         cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input').clear().type('2025-19-05');
-    //         cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input').clear().type('2025-20-05');
-    //         cy.xpath("//button[normalize-space()='Apply']").click();
-    //         cy.get('.oxd-toast-content').should('contain', 'Success');
-    //     });
+    it('Cuti Karyawan Baru',()=> {
+        loginKaryawan(newusername,newpassword);
+            cy.get(':nth-child(1) > .oxd-main-menu-item').contains('Leave').click();
+            cy.get('.oxd-topbar-body-nav > ul > :nth-child(1)').click();
+            cy.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[1]").click();
+            cy.get('.oxd-select-dropdown').contains('CAN - Personal').click();
+            cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input').clear().type('2025-19-05');
+            cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input').clear().type('2025-20-05');
+            cy.xpath("//button[normalize-space()='Apply']").click();
+            cy.get('.oxd-toast-content').should('contain', 'Success');
+        });
     });
 
 
